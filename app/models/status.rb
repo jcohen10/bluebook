@@ -3,5 +3,7 @@ class Status < ActiveRecord::Base
   def status_params
     params.require(:status).permit(:context)
   end
+
+  belongs_to :user
 end
 
